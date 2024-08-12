@@ -1,0 +1,267 @@
+<!doctype html><html><head><style type="text/css">header {
+  color: rgb(231, 231, 231); 
+  background-color: rgb(211, 47, 47);
+  padding: 129px 300px;
+   
+}
+
+
+
+body {
+  background-color: #aaaaaa;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100vw; /* Set body width to 100% of viewport width */
+  height: 100vh; /* Set body height to 100% of viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjust content spacing */
+  text-align: center;
+}
+
+
+#navigationbar { 
+  padding: 35px;
+  display: inline-block;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#navigationbar a {
+    color:rgb(235, 233, 233);
+    background-color: rgb(201, 0, 33);
+    min-width: 75px;
+    border: .5px solid rgb(68, 0, 0);
+    border-radius: 10px;
+    text-decoration: blue;
+    text-align: center;
+    display: inline-block;
+    padding: 39px;
+    box-shadow:
+    0 0 30px 0 rgb(224, 23, 23),
+    0 0 30px 0 rgb(121, 1, 1),
+    0 0 10px 0 rgb(0, 0, 0) inset;
+    margin: 75px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Add transition for smooth color change */
+}
+
+.text {
+  background-color: rgb(231, 0, 0); 
+  color: black;
+}
+
+.artifacts {
+  padding: 5px;
+}
+
+.artifactText {
+  font-size: 31pt;
+  font-style: italic;
+  color: rgb(107, 2, 2);
+}
+
+.ArtifactExp {
+  font-size: 15pt;
+  color: rgb(107, 2, 2);
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+  margin: auto;
+  padding: px;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 900px; /* Set a minimum height to accommodate the content */
+  min-width: 780px;
+  color: rgb(129, 0, 0);
+  font-size: 45px;
+  font-style: italic;
+  width: 100px;
+}
+
+.carousel img {
+  width: auto;
+  height: 600px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the given dimensions while maintaining aspect ratio */
+  border-radius: 10px;
+  transition: opacity: 0.5s;
+}
+
+.carousel img.fade-in{
+  opacity: 1;
+
+}
+
+.carousel img.slide-in {
+  animation: slide-in 1s forwards;
+}
+
+.carousel-button {
+  background-color: #aaaaaa;
+  border: red;
+  color: rgb(102, 0, 0);
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Add transition for smooth color change */
+}
+
+.prev {
+  left: -50px; /* Adjust as needed to position outside the carousel container */
+}
+
+.next {
+  right: -50px; /* Adjust as needed to position outside the carousel container */
+}
+
+.carousel-Exp {
+  font-size: 25px;
+  margin-top: 20px; /* Add some margin to separate the description from the image */
+}
+
+.header-text {
+    color:rgb(235, 233, 233);
+    background-color: rgb(201, 0, 33);
+    min-width: 75px;
+    height: 700px;
+    border: .5px solid rgb(68, 0, 0);
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 30px;
+    box-shadow:
+    0 0 30px 0 rgb(224, 23, 23),
+    0 0 30px 0 rgb(121, 1, 1),
+    0 0 10px 0 rgb(0, 0, 0) inset;
+    margin: 35px;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.carousel-button:hover {
+    background-color: #888888;
+    color: rgb(255, 255, 255);
+}
+#navigationbar a:hover {
+    background-color: rgb(235, 124, 124); /* Change background color on hover */
+    color: rgb(255, 255, 255); /* Change text color on hover */
+}
+
+</style></head><body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alejandro's Website</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class= "header-text">
+	<header id="top">
+		<h1>Love-Thornell Collection of Black American Photographs</h1>
+		<h2>by Alejandro</h2>
+		</div>
+	</header>
+	<div class="text">
+		
+	</div>
+	<div id="navigationbar">
+		<a href="index.html">Home</a>
+	<a href="https://digitalarchives.broward.org/digital/collection/p16146coll35" target="_blank">Love-Thornell</a>
+<a href="https://www.broward.org/Library/Pages/AARLCCStory.aspx" target="_blank">AARLCC Library</a>
+<a href="https://broward.lyrasistechnology.org/repositories/2/resources/168" target="_blank">More Love-Thornell</a>
+
+	</div>
+	<div class="carousel">
+		<div class="carousel-content">
+			<p id="carousel-label"></p>
+			<button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
+			<img id="carousel-image" src="https://digitalarchives.broward.org/digital/api/singleitem/image/p16146coll35/2928/default.jpg" alt="Image 1">
+			<button class="carousel-button next" onclick="nextImage()">&#10095;</button>
+			<p class="carousel-Exp" id="carousel-Exp"></p>
+		</div>
+	</div>
+	<script src="script.js"></script>
+
+
+</body>
+
+</html><script type="text/javascript">const images = [
+  {
+    src: 'https://digitalarchives.broward.org/digital/api/singleitem/image/p16146coll35/2928/default.jpg',
+    label: 'Couple Posing for a Picture',
+    Exp: 'This is a photograph from the Love-Thornell collection which shows a couple posing together. The photographer, studio, and time are not specified, however, we can guess it is around the 1920s based on the women\'s hat.'
+  },
+  {
+    src: 'https://digitalarchives.broward.org/digital/api/singleitem/image/p16146coll35/1181/default.jpg',
+    label: 'Alexandre Dumas Poses for a Picture',
+    Exp: 'This is a picture of Alexandre Dumas in the Love-Thornell Collection. Alexandre Dumas was a novelist who went global between 1829 and 1869 with some of his great books being The Three Musketeers and The Count of Monte Cristo. Something that I really like about this picture is that Alexandre was alive between 1802 and 1870, which makes this picture almost 2 centuries old!'
+  },
+  {
+    src: 'https://digitalarchives.broward.org/digital/api/singleitem/image/p16146coll35/930/default.jpg',
+    label: 'Black woman holding a white baby',
+    Exp: 'This is a photograph from the Love-Thornell Collection which displays a black woman holding a white baby, the photographer, studio, and time is again unknown. '
+  },
+  {
+    src: 'https://digitalarchives.broward.org/digital/api/singleitem/image/p16146coll35/2943/default.jpg',
+    label: 'Bill "Bojangles" Robinson Doing a Dance Routine at Times Square',
+    Exp: 'This is a picture of Bill "Bojangles" Robinson in the Love-Thornell Collection. Bill "Bojangles" Robinson was a dancer a doctor and an activist who lived from 1878 to 1949, known for his accurate step-dancing and his great movies like Stormy Weather and The Little Colonel. '
+  }
+];
+
+let currentIndex = 0;
+
+function showImage(index) {
+  const imageElement = document.getElementById('carousel-image');
+  const labelElement = document.getElementById('carousel-label');
+  const ExpElement = document.getElementById('carousel-Exp');
+
+  imageElement.classList.remove('slide-in');
+  void imageElement.offsetWidth; // trigger reflow
+  imageElement.src = images[index].src;
+  imageElement.classList.add('slide-in');
+  labelElement.textContent = images[index].label;
+  ExpElement.textContent = images[index].Exp;
+}
+
+function prevImage() {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+  showImage(currentIndex);
+}
+
+function nextImage() {
+  currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+  showImage(currentIndex);
+}
+
+// Initial display
+showImage(currentIndex);
+
+
+</script></body><html>
